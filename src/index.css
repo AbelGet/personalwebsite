@@ -1,13 +1,278 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+*::selection {
+  background-color: #90ee90;
+}
+
+.aboutTitle,
+.skillTitle,
+.experiencetitle {
+  font-size: 40px;
+  text-align-last: center;
+  color: #233474;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bgimg {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./File/Img/background.jpg);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+header {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  border: px solid #ccc;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+}
+
+.headerContent {
+  display: flex;
+  width: 80%;
+  border: 5px solid #ccc;
+  border-radius: 50px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+  padding: 50px;
+}
+
+.info .name {
+  font-size: 64px;
+  text-stroke: 1px #d3fbd8;
+  -webkit-text-stroke: 1px #d3fbd8;
+  -moz-text-stroke: 1px #d3fbd8;
+  -ms-text-stroke: 1px #d3fbd8;
+  -o-text-stroke: 1px #d3fbd8;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.discription {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #fff;
+  font-weight: 500;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact h4 a {
+  font-weight: 500;
+}
+
+.contact h4 a:hover {
+  color: #1da1f2;
+}
+
+.contact a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.download {
+  font-size: 20px;
+  padding: 10px;
+  background-color: limegreen;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  margin-top: 0px;
+}
+
+.download a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.download:hover {
+  background-color: darkgreen;
+  cursor: pointer;
+}
+
+.pic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pic img {
+  width: 60%;
+}
+
+.aboutMe {
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMeContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutParagraph {
+  flex: 1;
+  font-size: 30px;
+  text-align: end;
+}
+
+.skill {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillContent {
+  background-color: #454655;
+  height: 80%;
+  width: 100%;
+}
+
+.skillTitle {
+  color: #fff;
+}
+
+.contentSkill {
+  display: flex;
+  padding: 30px;
+}
+
+.rowOne,
+.rowTwo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rowOne h3,
+.rowTwo h3 {
+  font-size: 35px;
+  color: white;
+  font-weight: 500;
+  text-align: left;
+}
+
+.skillname {
+  color: #e3e0f3;
+  font-size: 30px;
+  list-style: none;
+  text-align: left;
+}
+
+.experience {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.experienceContent {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px -5px 29px 1px rgba(26, 117, 255, 0.32);
+  border-radius: 10px;
+  align-items: flex-start;
+  padding: 16px 14px 30px 20px;
+  flex: 1;
+  min-width: 427px;
+  max-width: 427px;
+  height: 317;
+}
+
+.listExperince {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.experiencePic {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+.experienceContent:hover {
+  background-color: #6988f9;
+  color: white;
+  box-shadow: 10px -10px 35px 10px rgba(26, 117, 255, 0.5);
+  transform: scale(1.2);
+}
+
+.companyName {
+  margin: 5px 0px 20px 0;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
 }

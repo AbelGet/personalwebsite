@@ -1,8 +1,10 @@
+import "./App.css";
 import pic1 from "./File/Img/profile-pic (2).png";
 import pic2 from "./File/Img/profile-pic (3).png";
 import ebirr from "./File/Img/download.png";
-import "./App.css";
+import chip from "./File/Img/chip3.png";
 import Experience from "./Experience";
+import Project from "./Project";
 
 function App() {
   const graphicsSkills = [
@@ -126,7 +128,7 @@ function App() {
           </div>
         </div>
         <div className="experience">
-          <div className="experiencetitle">Experience</div>
+          <div className="experienceTitle">Experience</div>
           <div className="listExperince">
             <Experience
               pic={ebirr}
@@ -140,21 +142,44 @@ function App() {
               discription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
               link="https://abelprinting.netlify.app/"
             />
-
-            <Experience
-              pic={ebirr}
-              name="E-birr Private Limited Company"
-              discription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
-              link="https://abelprinting.netlify.app/"
-            />
-
-          
-
           </div>
+          <div className="contentProject">
+            <div className="projecttTitle">Project</div>
+            <div className="listProject">
+              <Project
+                projectImg={ebirr}
+                projectName="E-birr Private Limited Company"
+                projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
+              />
+
+              <Project
+                projectImg={ebirr}
+                projectName="E-birr Private Limited Company"
+                projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
+              />
+
+              <Project
+                projectImg={ebirr}
+                projectName="E-birr Private Limited Company"
+                projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
+              />
+
+              <Project
+                projectImg={ebirr}
+                projectName="E-birr Private Limited Company"
+                projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
+              />
+            </div>
+          </div>
+        </div>
+        <div className="contactMe">
+          <div className="chipPic">
+            <img src={chip} alt="" />
+          </div>
+          <div className="form"></div>
         </div>
       </div>
     </div>
   );
 }
-
 export default App;

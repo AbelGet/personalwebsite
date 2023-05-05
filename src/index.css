@@ -18,7 +18,8 @@ code {
 
 .aboutTitle,
 .skillTitle,
-.experiencetitle {
+.experienceTitle,
+.projecttTitle {
   font-size: 40px;
   text-align-last: center;
   color: #233474;
@@ -228,16 +229,16 @@ header {
   text-align: left;
 }
 
-.experience {
-  height: 100vh;
+.experience, .contentProject {
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
-.experienceContent {
+.experienceContent, .projectContent {
   display: flex;
   flex-direction: column;
   box-shadow: 4px -5px 29px 1px rgba(26, 117, 255, 0.32);
@@ -248,16 +249,19 @@ header {
   min-width: 427px;
   max-width: 427px;
   height: 317;
+  margin-bottom: 100px;
+
 }
 
-.listExperince {
+.listExperince, .listProject {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 80%;
 }
 
-.experiencePic {
+.experiencePic, .projectPic {
   width: 70px;
   height: 70px;
   border-radius: 100%;
@@ -267,12 +271,20 @@ header {
   background-color: #6988f9;
   color: white;
   box-shadow: 10px -10px 35px 10px rgba(26, 117, 255, 0.5);
-  transform: scale(1.2);
 }
 
-.companyName {
+.companyName, .projectName {
   margin: 5px 0px 20px 0;
   font-weight: 800;
   font-size: 24px;
   line-height: 32px;
+}
+
+.contactMe {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

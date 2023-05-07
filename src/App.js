@@ -173,10 +173,39 @@ function App() {
           </div>
         </div>
         <div className="contactMe">
-          <div className="chipPic">
-            <img src={chip} alt="" />
+          <div className="allContactMe">
+            <div className="chipPic">
+              <img src={chip} alt="" />
+            </div>
+            <div className="form">
+              <form action="">
+                <h2>Contact Me</h2>
+                <div className="input-group">
+                  <label>First Name</label>
+                  <input type="text" placeholder="Abel" />
+                </div>
+                <div className="input-group">
+                  <label>Last Name</label>
+                  <input type="text" placeholder="Getahun" />
+                </div>
+                <div className="input-group">
+                  <label> Phone Number </label>
+                  <input type="number" placeholder="(+251)-937-603-232" />
+                </div>
+                <div className="input-group">
+                  <label> Email </label>
+                  <input type="email" placeholder="abelgetahun53@gmail.com" />
+                </div>
+                <div className="input-group">
+                  <label> Message </label>
+                  <textarea name="" id="" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" className="btnSubmit">
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
-          <div className="form"></div>
         </div>
       </div>
     </div>

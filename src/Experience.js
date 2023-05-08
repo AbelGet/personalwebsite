@@ -8,7 +8,7 @@ const Experience = (props) => {
       <div>
         <p>{props.discription}</p>
         <button id="openModal" className="readMore">
-          read more
+          read more...
         </button>
       </div>
     </div>

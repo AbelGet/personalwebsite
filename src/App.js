@@ -1,3 +1,4 @@
+import React, { useRef, useState } from "react";
 import "./App.css";
 import pic1 from "./File/Img/profile-pic (2).png";
 import pic2 from "./File/Img/profile-pic (3).png";
@@ -5,6 +6,8 @@ import ebirr from "./File/Img/download.png";
 import chip from "./File/Img/chip3.png";
 import Experience from "./Experience";
 import Project from "./Project";
+import emailjs from "@emailjs/browser";
+// import CVFile from "./File/File/Abel Getahun CURRICULUM VITAE.pdf";
 
 function App() {
   const graphicsSkills = [
@@ -35,6 +38,32 @@ function App() {
   const backEndList = backEndSkills.map((backEndSkill) => (
     <li>{backEndSkill}</li>
   ));
+
+  const [showDiv, setShowDiv] = useState(false);
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_lg1gjsk",
+        "template_sgipzbr",
+        form.current,
+        "TCUZuvjfYwPZR8vOw"
+      )
+      .then(
+        (result) => {
+          setShowDiv(true);
+          e.target.reset();
+          setTimeout(() => {
+            setShowDiv(false);
+          }, 5000);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="App">
       <div className="container">
@@ -151,24 +180,6 @@ function App() {
                 projectName="E-birr Private Limited Company"
                 projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
               />
-
-              <Project
-                projectImg={ebirr}
-                projectName="E-birr Private Limited Company"
-                projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
-              />
-
-              <Project
-                projectImg={ebirr}
-                projectName="E-birr Private Limited Company"
-                projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
-              />
-
-              <Project
-                projectImg={ebirr}
-                projectName="E-birr Private Limited Company"
-                projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
-              />
             </div>
           </div>
         </div>
@@ -178,33 +189,102 @@ function App() {
               <img src={chip} alt="" />
             </div>
             <div className="form">
-              <form action="">
+              <form action="" ref={form} onSubmit={sendEmail}>
                 <h2>Contact Me</h2>
                 <div className="input-group">
                   <label>First Name</label>
-                  <input type="text" placeholder="Abel" />
+                  <input type="text" placeholder="Abel" name="user_fname" />
                 </div>
                 <div className="input-group">
                   <label>Last Name</label>
-                  <input type="text" placeholder="Getahun" />
+                  <input type="text" placeholder="Getahun" name="user_lname" />
                 </div>
                 <div className="input-group">
                   <label> Phone Number </label>
-                  <input type="number" placeholder="(+251)-937-603-232" />
+                  <input
+                    type="number"
+                    placeholder="(+251)-937-603-232"
+                    name="user_phno"
+                  />
                 </div>
                 <div className="input-group">
                   <label> Email </label>
-                  <input type="email" placeholder="abelgetahun53@gmail.com" />
+                  <input
+                    type="email"
+                    placeholder="abelgetahun53@gmail.com"
+                    name="user_email"
+                  />
                 </div>
                 <div className="input-group">
                   <label> Message </label>
-                  <textarea name="" id="" placeholder="Message"></textarea>
+                  <textarea
+                    name=""
+                    id=""
+                    placeholder="Message"
+                    name="user_message"
+                  ></textarea>
                 </div>
-                <button type="submit" className="btnSubmit">
-                  Submit
-                </button>
+                <div className="btnNSuccess">
+                  <button type="submit" className="btnSubmit">
+                    Submit
+                  </button>
+                  {showDiv && <div className="success">Success</div>}
+                </div>
               </form>
             </div>
+          </div>
+        </div>
+
+        <div className="footer">
+          <div className="footerRowONe">
+            <h1>Abel Getahun Miheretu</h1>
+          </div>
+          <div className="footerRowTwo">
+            <h1>Contact</h1>
+            <ul>
+              <li>
+                <a href="tel: +251937603232">(+251)-937-60-323</a>
+              </li>
+              <li>
+                <a href="https://github.com/AbelGet"> GitHub</a>
+              </li>
+              <li>
+                <a href="mailto:abelgetahun53@gmail.com"> Email </a>
+              </li>
+              <li>
+                <a href="https://t.me/Bellagetu">Telegram</a>
+              </li>
+              <li>
+                <a href="http://www.linkedin.com/in/abel-getahun5310">
+                  Linked In
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="footerRowThree">
+            <h1>Personale Qualification</h1>
+            <ul>
+              <li>
+                <a href="./File/File/Abel Getahun Tempo.pdf" download>
+                  Computer Science Bachelor’s Degree
+                </a>
+              </li>
+              <li>
+                <a href="*">Dereja Academy Accelerator Program</a>
+              </li>
+              <li>
+                <a href="*">Learning Experian Design</a>
+              </li>
+              <li>
+                <a href="*">Python Programming Language</a>
+              </li>
+              <li>
+                <a href="*">Python for Data Science</a>
+              </li>
+              <li>
+                <a href="*">Adobe XD</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const Project = (props) => {
       <div>
         <p>{props.projectDescription}</p>
         <button id="openModal" className="readMore">
-          read more
+          read more...
         </button>
       </div>
     </div>

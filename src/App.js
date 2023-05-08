@@ -7,7 +7,6 @@ import chip from "./File/Img/chip3.png";
 import Experience from "./Experience";
 import Project from "./Project";
 import emailjs from "@emailjs/browser";
-// import CVFile from "./File/File/Abel Getahun CURRICULUM VITAE.pdf";
 
 function App() {
   const graphicsSkills = [

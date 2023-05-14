@@ -274,7 +274,7 @@ header {
 .projectContent:hover {
   background-color: #6988f9;
   color: white;
-  box-shadow: 10px -10px 35px 10px rgba(26, 117, 255, 0.5);
+  box-shadow: 10px -10px 35px 10px rgba(26, 117, 255, 0.2);
 }
 
 .companyName,

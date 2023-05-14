@@ -3,6 +3,8 @@ import "./App.css";
 import pic1 from "./File/Img/profile-pic (2).png";
 import pic2 from "./File/Img/profile-pic (3).png";
 import ebirr from "./File/Img/download.png";
+import abelLogo from "./File/Img/abelLogo.png";
+import InfoMind from "./File/Img/infoMind.png";
 import chip from "./File/Img/chip3.png";
 import Experience from "./Experience";
 import Project from "./Project";
@@ -79,28 +81,46 @@ function App() {
                   <a href="tel:+251937603232">+251-937-603-232</a>
                 </h4>
                 <h4>
-                  <a href="mailto:abelgetahun53@gmail.com">
+                  <a
+                    href="mailto:abelgetahun53@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     abelgetahun53@gmail.com
                   </a>
                 </h4>
                 <h4>
-                  <a href="https://t.me/Bellagetu">@Bellagetu</a>
+                  <a
+                    href="https://t.me/Bellagetu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @Bellagetu
+                  </a>
                 </h4>
                 <h4>
-                  <a href="https://github.com/AbelGet">GitHub</a>
+                  <a
+                    href="https://github.com/AbelGet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
                 </h4>
               </div>
               <div className="button">
                 <button className="download">
                   <a
-                    href="./File/File/ABEL Getahun CURRICULUM VITAE.pdf"
+                    href="./File/ABEL Getahun CURRICULUM VITAE.pdf"
                     download
                   >
                     Download CV
                   </a>
                 </button>
                 <button className="download">
-                  <a href="*">Download Resume</a>
+                  <a href="./File/Abel Getahun DAAP.pdf" download>
+                    Download Resume
+                  </a>
                 </button>
               </div>
             </div>
@@ -165,9 +185,9 @@ function App() {
               link="https://abelprinting.netlify.app/"
             />
             <Experience
-              pic={ebirr}
-              name="E-birr Private Limited Company"
-              discription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
+              pic={InfoMind}
+              name="Info Mind Solutions"
+              discription="With more than 20 years of experience, IMS is the leading Human Resource solutions provider in Ethiopia. IMS has assisted over 2000 national and multi-national organizations in Ethiopia."
               link="https://abelprinting.netlify.app/"
             />
           </div>
@@ -175,9 +195,9 @@ function App() {
             <div className="projecttTitle">Project</div>
             <div className="listProject">
               <Project
-                projectImg={ebirr}
-                projectName="E-birr Private Limited Company"
-                projectDescription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
+                projectImg={abelLogo}
+                projectName="Abel Printing and Advertising Work"
+                projectDescription="Abel Printing & Advertising Work, founded in 2010, is a full-service integrated advertising solution provider that serves the business and general public printing demands. We provide a wide range of advertising options, such as digital and static out-of-door and in-door advertising items including light boxes and reflective banners, display stands, stickers, automotive branding, wall branding, high-quality posters, and more."
               />
             </div>
           </div>
@@ -217,7 +237,6 @@ function App() {
                 <div className="input-group">
                   <label> Message </label>
                   <textarea
-                    name=""
                     id=""
                     placeholder="Message"
                     name="user_message"
@@ -245,16 +264,39 @@ function App() {
                 <a href="tel: +251937603232">(+251)-937-60-323</a>
               </li>
               <li>
-                <a href="https://github.com/AbelGet"> GitHub</a>
+                <a
+                  href="https://github.com/AbelGet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
               </li>
               <li>
-                <a href="mailto:abelgetahun53@gmail.com"> Email </a>
+                <a
+                  href="mailto:abelgetahun53@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  Email{" "}
+                </a>
               </li>
               <li>
-                <a href="https://t.me/Bellagetu">Telegram</a>
+                <a
+                  href="https://t.me/Bellagetu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Telegram
+                </a>
               </li>
               <li>
-                <a href="http://www.linkedin.com/in/abel-getahun5310">
+                <a
+                  href="http://www.linkedin.com/in/abel-getahun5310"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Linked In
                 </a>
               </li>

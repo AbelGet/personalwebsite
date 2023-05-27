@@ -65,6 +65,25 @@ function App() {
         }
       );
   };
+
+  const CV = "http://localhost:3000/File/ABEL Getahun CURRICULUM VITAE.pdf";
+  const DAAP = "http://localhost:3000/File/Abel Getahun DAAP.pdf";
+  const LXD = "http://localhost:3000/File/Abel Getahun LXD.pdf";
+  const python = "http://localhost:3000/File/Abel Getahun Python.pdf";
+  const Tempo = "http://localhost:3000/File/Abel Getahun Tempo.pdf";
+  const AdobeXD = "http://localhost:3000/File/Certificate Adobe XD.pdf";
+  const dataScience = "http://localhost:3000/File/Python for data science.pdf";
+
+  const downloadFileAtURL = (url) => {
+    const fileName = url.split("/").pop();
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", fileName);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -109,16 +128,16 @@ function App() {
                 </h4>
               </div>
               <div className="button">
-                <button className="download">
-                  <a
-                    href="./File/ABEL Getahun CURRICULUM VITAE.pdf"
-                    download
-                  >
-                    Download CV
-                  </a>
+                <button
+                  className="download"
+                  onClick={() => {
+                    downloadFileAtURL(CV);
+                  }}
+                >
+                  Download CV
                 </button>
                 <button className="download">
-                  <a href="./File/Abel Getahun DAAP.pdf" download>
+                  <a href="*" download>
                     Download Resume
                   </a>
                 </button>
@@ -305,25 +324,47 @@ function App() {
           <div className="footerRowThree">
             <h1>Personale Qualification</h1>
             <ul>
-              <li>
-                <a href="./File/File/Abel Getahun Tempo.pdf" download>
-                  Computer Science Bachelor’s Degree
-                </a>
+              <li
+                onClick={() => {
+                  downloadFileAtURL(Tempo);
+                }}
+              >
+                Computer Science Bachelor’s Degree
               </li>
-              <li>
-                <a href="*">Dereja Academy Accelerator Program</a>
+              <li
+                onClick={() => {
+                  downloadFileAtURL(DAAP);
+                }}
+              >
+                Dereja Academy Accelerator Program
               </li>
-              <li>
-                <a href="*">Learning Experian Design</a>
+              <li
+                onClick={() => {
+                  downloadFileAtURL(LXD);
+                }}
+              >
+                Learning Experian Design
               </li>
-              <li>
-                <a href="*">Python Programming Language</a>
+              <li
+                onClick={() => {
+                  downloadFileAtURL(python);
+                }}
+              >
+                Python Programming Language
               </li>
-              <li>
-                <a href="*">Python for Data Science</a>
+              <li
+                onClick={() => {
+                  downloadFileAtURL(dataScience);
+                }}
+              >
+                Python for Data Science
               </li>
-              <li>
-                <a href="*">Adobe XD</a>
+              <li
+                onClick={() => {
+                  downloadFileAtURL(AdobeXD);
+                }}
+              >
+                Adobe XD
               </li>
             </ul>
           </div>

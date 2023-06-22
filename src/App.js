@@ -84,6 +84,10 @@ function App() {
     aTag.remove();
   };
 
+  const alertOnResume = () => {
+    alert("Please wait...The Resume is under construction");
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -114,7 +118,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    @Bellagetu
+                    Telegram
                   </a>
                 </h4>
                 <h4>
@@ -136,10 +140,10 @@ function App() {
                 >
                   Download CV
                 </button>
-                <button className="download">
-                  <a href="*" download>
+                <button className="download" onClick={() => {
+                  alertOnResume();
+                }}>
                     Download Resume
-                  </a>
                 </button>
               </div>
             </div>

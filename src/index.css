@@ -452,6 +452,7 @@ textarea ~ label {
   text-decoration: none;
   font-size: 25px;
   text-align: left;
+  cursor: pointer;
 }
 
 .footerRowTwo li:hover,
@@ -459,3 +460,20 @@ textarea ~ label {
 .footer a:hover {
   color: #1A73E8;
 }
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .contact {
+    flex-direction: column;
+    justify-content: ;
+  }
+
+  .pic img{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){}
+
+@media screen and (min-width: 576px) and (max-width: 767px){}
+
+@media screen and (max-width: 575px) {}

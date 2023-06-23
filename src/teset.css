@@ -131,25 +131,51 @@
 }
 
 @media screen and (max-width: 575px) {
+  .aboutTitle,
+  .skillTitle,
+  .experienceTitle,
+  .projecttTitle {
+    font-size: 30px;
+  }
+
   .headerContent {
     flex-direction: column-reverse;
   }
 
   .info .name {
-    font-size: 44px;
+    font-size: 30px;
+  }
+
+  .discription {
+    font-size: 17.5px;
   }
 
   .contact {
     flex-direction: column;
     margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .contactLink img {
+    width: 0px;
+  }
+
+  .contact a {
+    font-size: 15px;
+    margin-bottom: 10px;
   }
 
   .pic img {
     width: 30%;
   }
 
+  .button {
+    flex-direction: column;
+  }
+
   .download {
     font-size: 15px;
+    margin-bottom: 20px;
   }
 
   .aboutMeContent {
@@ -163,6 +189,11 @@
     width: 70%;
   }
 
+  .experienceContent,
+  .projectContent {
+    min-width: 327px;
+    max-width: 427px;
+  }
   .rowOne h3,
   .rowTwo h3 {
     font-size: 22.5px;
@@ -174,6 +205,11 @@
 
   .formContent {
     width: 80%;
+  }
+
+  form h2 {
+    text-align: center;
+    font-size: 3rem;
   }
 
   .footer {

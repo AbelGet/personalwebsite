@@ -98,7 +98,7 @@ header {
   font-weight: 500;
 }
 
-.discription {
+.discription1 {
   font-size: 20px;
   text-transform: uppercase;
   margin: 0;
@@ -273,7 +273,6 @@ header {
   height: 317;
   margin-bottom: 100px;
 }
-
 .listExperince,
 .listProject {
   display: flex;
@@ -281,6 +280,7 @@ header {
   justify-content: space-around;
   align-items: center;
   width: 80%;
+  color: #000;
 }
 
 .experiencePic,
@@ -290,11 +290,8 @@ header {
   border-radius: 100%;
 }
 
-.experienceContent:hover,
-.projectContent:hover {
-  background-color: #6988f9;
-  color: white;
-  box-shadow: 10px -10px 35px 10px rgba(26, 117, 255, 0.2);
+.responsibilitys {
+  text-align: left;
 }
 
 .companyName,
@@ -310,10 +307,6 @@ header {
   border: none;
   color: #1a73e8;
   font-size: 20px;
-}
-
-.readMore:hover {
-  color: #fff;
 }
 
 .contactMe {
@@ -424,6 +417,20 @@ form textarea {
   border-radius: 11px;
   background: #006400;
   box-shadow: inset 23px 23px 48px #003f00, inset -23px -23px 48px #008900;
+}
+
+.status {
+  font-size: 40px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.success {
+  background-color: #32cd32;
+}
+
+.error {
+  background-color: red;
 }
 
 .footer {

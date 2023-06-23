@@ -92,6 +92,25 @@ function App() {
     alert("Please wait...The Resume is under construction");
   };
 
+  const responsibility = [
+    "Promotion",
+    "New  Customer Registration",
+    "Sending Electronic Money",
+    "Reciving Electronic Money and Cash",
+  ];
+
+  const responsibility2 = [
+    "Carfully review CV",
+    "Carfully giving grades for CV",
+    "Report everyone that has been reviewed",
+  ];
+
+  const responsibility3 = [
+    "Design the Graphics of the webpage",
+    "Codding the front-end of the website",
+    "Hosting the website",
+  ];
+
   return (
     <div className="App">
       <div className="container">
@@ -101,7 +120,7 @@ function App() {
             <div className="headerContent">
               <div className="info">
                 <h1 className="name">Abel Getahun Miheretu</h1>
-                <h4 className="discription">
+                <h4 className="discription1">
                   Every Accomplishment Starts With The Decision To Try!!!
                 </h4>
                 <div className="contact">
@@ -226,14 +245,14 @@ function App() {
               <Experience
                 pic={ebirr}
                 name="E-birr Private Limited Company"
-                discription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market."
-                link="https://abelprinting.netlify.app/"
+                discription="E-Birr is a telecom value-added and Mobile Financial Service provider established in 2016. E-Birr is using the safarifone Mobile financial services technology (MFS) and customized it in a way to fit the Ethiopian market. "
+                responsibilitys={responsibility}
               />
               <Experience
                 pic={InfoMind}
                 name="Info Mind Solutions"
                 discription="With more than 20 years of experience, IMS is the leading Human Resource solutions provider in Ethiopia. IMS has assisted over 2000 national and multi-national organizations in Ethiopia."
-                link="https://abelprinting.netlify.app/"
+                responsibilitys={responsibility2}
               />
             </div>
             <div className="contentProject">
@@ -242,7 +261,9 @@ function App() {
                 <Project
                   projectImg={abelLogo}
                   projectName="Abel Printing and Advertising Work"
-                  projectDescription="Abel Printing & Advertising Work, founded in 2010, is a full-service integrated advertising solution provider that serves the business and general public printing demands. We provide a wide range of advertising options, such as digital and static out-of-door and in-door advertising items including light boxes and reflective banners, display stands, stickers, automotive branding, wall branding, high-quality posters, and more."
+                  projectDescription="Abel Printing & Advertising Work, founded in 2010, is a full-service integrated advertising solution provider that serves the business and general public printing demands. They provide a wide range of advertising options, such as digital and static out-of-door and in-door advertising items including light boxes and reflective banners, display stands, stickers, automotive branding, wall branding, high-quality posters, and more."
+                  responsibilitys={responsibility3}
+                  link="https://abelprinting.netlify.app/"
                 />
               </div>
             </div>
@@ -290,9 +311,8 @@ function App() {
                   </div>
                   <div className="btnNSuccess">
                     <button type="submit" className="btnSubmit">
-                      Submit
+                      {showDiv ? "Success" : "Submit"}
                     </button>
-                    {showDiv && <div className="success">Success</div>}
                   </div>
                 </form>
               </div>

@@ -1,0 +1,185 @@
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .headerContent {
+    flex-direction: column-reverse;
+  }
+
+  .pic img {
+    width: 30%;
+  }
+
+  .aboutMeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .formContent {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .aboutTitle,
+  .skillTitle,
+  .experienceTitle,
+  .projecttTitle {
+    font-size: 30px;
+  }
+
+  .headerContent {
+    flex-direction: column-reverse;
+  }
+
+  .info .name {
+    font-size: 44px;
+  }
+
+  .contact {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .pic img {
+    width: 30%;
+  }
+
+  .aboutMeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .picAbout img {
+    width: 70%;
+  }
+
+  .rowOne h3,
+  .rowTwo h3 {
+    font-size: 22.5px;
+  }
+
+  .skillname {
+    font-size: 20px;
+  }
+
+  .formContent {
+    width: 80%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .headerContent {
+    flex-direction: column-reverse;
+  }
+
+  .info .name {
+    font-size: 44px;
+  }
+
+  .contact {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .pic img {
+    width: 30%;
+  }
+
+  .download {
+    font-size: 15px;
+  }
+
+  .aboutMeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .picAbout img {
+    width: 70%;
+  }
+
+  .rowOne h3,
+  .rowTwo h3 {
+    font-size: 22.5px;
+  }
+
+  .skillname {
+    font-size: 20px;
+  }
+
+  .formContent {
+    width: 80%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .headerContent {
+    flex-direction: column-reverse;
+  }
+
+  .info .name {
+    font-size: 44px;
+  }
+
+  .contact {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .pic img {
+    width: 30%;
+  }
+
+  .download {
+    font-size: 15px;
+  }
+
+  .aboutMeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .picAbout img {
+    width: 70%;
+  }
+
+  .rowOne h3,
+  .rowTwo h3 {
+    font-size: 22.5px;
+  }
+
+  .skillname {
+    font-size: 20px;
+  }
+
+  .formContent {
+    width: 80%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+}

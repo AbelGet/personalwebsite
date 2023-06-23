@@ -32,6 +32,13 @@ code {
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.headerContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -55,7 +62,6 @@ header {
   display: flex;
   height: 100vh;
   width: 100%;
-  border: px solid #ccc;
   justify-content: space-around;
   align-items: center;
   position: absolute;
@@ -102,15 +108,24 @@ header {
 
 .contact {
   display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 
-.contact h4 a {
+.contact a {
   font-weight: 500;
 }
 
-.contact h4 a:hover {
+.contactLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.contactLink img {
+  width: 30px;
+}
+
+.contact a:hover {
   color: #1da1f2;
 }
 
@@ -159,6 +174,11 @@ header {
   width: 60%;
 }
 
+.content {
+  height: 100vh;
+  display: relative;
+}
+
 .aboutMe {
   position: relative;
   width: 80%;
@@ -192,7 +212,7 @@ header {
 
 .skillContent {
   background-color: #454655;
-  height: 80%;
+  height: auto;
   width: 100%;
 }
 
@@ -292,6 +312,10 @@ header {
   font-size: 20px;
 }
 
+.readMore:hover {
+  color: #fff;
+}
+
 .contactMe {
   position: relative;
   height: 100vh;
@@ -307,24 +331,9 @@ header {
   height: 80%;
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
-.chipPic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 35%;
-}
-
-.chipPic img {
-  filter: invert(50%);
-  width: 90%;
-  top: 0;
-  left: 0;
-}
-
-.form {
+.formContent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -336,16 +345,6 @@ header {
   box-shadow: 50px 50px 61px #bebebe, -50px -50px 61px #ffffff;
 }
 
-.form h2 {
-  text-align: center;
-  font-size: 4rem;
-  text-decoration: underline black;
-  -webkit-text-stroke: 1px #d3fbd8;
-  -moz-text-stroke: 1px #d3fbd8;
-  -ms-text-stroke: 1px #d3fbd8;
-  -o-text-stroke: 1px #d3fbd8;
-}
-
 form {
   display: flex;
   justify-content: space-around;
@@ -355,12 +354,32 @@ form {
   height: 100%;
 }
 
+form h2 {
+  text-align: center;
+  font-size: 4rem;
+  text-decoration: underline black;
+  -webkit-text-stroke: 1px #d3fbd8;
+  -moz-text-stroke: 1px #d3fbd8;
+  -ms-text-stroke: 1px #d3fbd8;
+  -o-text-stroke: 1px #d3fbd8;
+}
+
 .input-group {
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
+  height: 100%;
   align-items: center;
+  justify-content: center;
+}
+
+label {
+  font-size: 20px;
+  color: #006eb1;
+  font-weight: 700;
+  width: 70%;
+  text-align: left;
+
 }
 
 form input,
@@ -372,23 +391,17 @@ form textarea {
   resize: none;
   padding: 5px 10px;
   font-size: 20px;
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
   color: purple;
+  background-color: rgba(0, 110, 177, 0.2);;
 }
 
-input:focus,
-textarea:focus {
-  border: 2px solid #1A73E8;
-  outline: none;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 form textarea {
   height: 95px;
-}
-
-form label {
-  background-color: #fff;
-  text-align: left;
 }
 
 .btnSubmit {
@@ -411,27 +424,6 @@ form label {
   border-radius: 11px;
   background: #006400;
   box-shadow: inset 23px 23px 48px #003f00, inset -23px -23px 48px #008900;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-.input-group label {
-  transform: translateY(30%) translateX(-150%);
-  font-size: 20px;
-  width: 150px;
-  text-align: center;
-  background: linear-gradient(90deg, #cacaca, #f0f0f0);
-  border: 1px black solid;
-  border-radius: 12px;
-  padding: 0 0.2em;
-  color: black;
-}
-
-textarea ~ label {
-  transform: translateY(-420%) translateX(-160%) scale(0.8);
 }
 
 .footer {
@@ -458,22 +450,11 @@ textarea ~ label {
 .footerRowTwo li:hover,
 .footerRowThree li:hover,
 .footer a:hover {
-  color: #1A73E8;
+  color: #1a73e8;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px){
-  .contact {
-    flex-direction: column;
-    justify-content: ;
-  }
 
-  .pic img{
-    width: 100%;
-  }
+
+
+@media screen and (max-width: 575px) {
 }
-
-@media screen and (min-width: 768px) and (max-width: 991px){}
-
-@media screen and (min-width: 576px) and (max-width: 767px){}
-
-@media screen and (max-width: 575px) {}
